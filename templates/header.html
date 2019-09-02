@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Header</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script id="header-template" type="text/x-handlebars-template">
+    <div class="header">
+        <div class="leftmenu">
+            <img src="templates/images/logo.png">       
+        </div>
+        <div class="rightmenu">
+                <ul>
+                        <li><a href="#">{{link1}}</a></li>
+                        <li><a href="#">{{link2}}</a></li>
+                        <li><a href="#">{{link3}}</a></li>
+                        <li><a href="#">{{link4}}</a></li>
+                        <li><a href="#">{{link5}}</a></li>
+                        <li><a href="#">{{link6}}</a></li>
+                        <li><a href="#">{{link7}}</a></li>  
+                </ul>
+        </div>
+    </div>
+  </script>
+
+  <script>
+  $(function () {
+    // Grab the template script
+    var theTemplateScript = $("#header-template").html();
+  
+    // Compile the template
+    var theTemplate = Handlebars.compile(theTemplateScript);
+  
+    // Define our data object
+    var context={
+
+      "link1": "Live",
+      "link2": "Automation",
+      "link3": "Blog",
+      "link4": "Pricing",
+      "link5": "Support",
+      "link6": "Login",
+      "link7": "Free SignUP",
+    };
+  
+    // Pass our data to the template
+    var theCompiledHtml = theTemplate(context);
+  
+    // Add the compiled html to the page
+    $('.content-placeholder').html(theCompiledHtml);
+  });
+  </script>
+  
+</head>
+<body>
+  
+  <!--Your new content will be displayed in here-->
+  <div class="content-placeholder"></div>
+</body>
+</html>
