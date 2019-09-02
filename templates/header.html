@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Header</title>
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 
-  <script id="header-template" type="text/x-handlebars-template">
-    <div class="header">
+  <script id="head-template" type="text/x-handlebars-template">
+    <div class="bgimage">
+      <div class="header">
         <div class="leftmenu">
-            <img src="templates/images/logo.png">       
+            <img src="../images/logo.png"; width="200px">       
         </div>
         <div class="rightmenu">
                 <ul>
@@ -26,13 +28,14 @@
                         <li><a href="#">{{link7}}</a></li>  
                 </ul>
         </div>
-    </div>
+      </div>
+    </div>  
   </script>
 
   <script>
   $(function () {
     // Grab the template script
-    var theTemplateScript = $("#header-template").html();
+    var theTemplateScript = $("#head-template").html();
   
     // Compile the template
     var theTemplate = Handlebars.compile(theTemplateScript);
