@@ -3,7 +3,7 @@
 .header{
   width: 100%;
   height: 100vh;
-  background-image: url(../images/greybg.jpg);
+  /* background-image: url(../images/greybg.jpg); */
   background-size: cover;
 }
 nav{
@@ -33,7 +33,7 @@ nav ul .sign:hover{ border-bottom:none; background: none;}
 nav ul .sign a{background: skyblue;}
 
 .footer{
-  background:white;
+  background:rgb(192, 189, 189);
   color: white;
   height: 200px;
   position: relative;
@@ -43,14 +43,14 @@ nav ul .sign a{background: skyblue;}
   display: flex;
   /* height: 149px; */
 }
-.footer .footer-content .footer-section{
+/* .footer .footer-content .footer-section{ 
   flex: 1;
   padding: 74px;
-  /* border: 1 px solid grey; */
-}
+ border: 1 px solid grey; 
+} */
 
-.footer .footer-bottom{
-  background:whitesmoke;
+ .footer .footer-bottom{ 
+  background:black;
   color:grey;
   height: 34px;
   width: 100%;
