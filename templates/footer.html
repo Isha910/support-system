@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Footer</title>
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <link rel="import" href="header.html">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script id="footer-template" type="text/x-handlebars-template">
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-section about"></div>
+        <div class="footer-section links"></div>
+        <div class="footer-section contact"></div>
+        
+      </div>
+      <div class="footer-bottom">
+        &copy; 2019 LambdaTest.com. All rights reserved
+      </div>
+      
+    </div>  
+  </script>
+
+  <script>
+  $(function () {
+    // Grab the template script
+    var theTemplateScript = $("#footer-template").html();
+  
+    // Compile the template
+    var theTemplate = Handlebars.compile(theTemplateScript);
+  
+    // Define our data object
+    var context={
+
+     
+    };
+  
+    // Pass our data to the template
+    var theCompiledHtml = theTemplate(context);
+  
+    // Add the compiled html to the page
+    $('.content-placeholder').html(theCompiledHtml);
+  });
+  </script>
+  
+</head>
+<body>
+  
+  <!--Your new content will be displayed in here-->
+  <div class="content-placeholder"></div>
+</body>
+</html>
