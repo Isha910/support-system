@@ -4,12 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Header</title>
+  <title>Support page</title>
   <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
 
 
-  <script id="head-template" type="text/x-handlebars-template">
+  <script id="template" type="text/x-handlebars-template">
     <div class="header">
       <nav>
         <img src="../images/logo.png" width="250px" style="margin-left:33px; margin-top:24px";>
@@ -29,7 +35,7 @@
   <script>
   $(function () {
     // Grab the template script
-    var theTemplateScript = $("#head-template").html();
+    var theTemplateScript = $("#template").html();
   
     // Compile the template
     var theTemplate = Handlebars.compile(theTemplateScript);
