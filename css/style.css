@@ -78,17 +78,16 @@ nav ul .sign a{background: skyblue;}
   text-decoration: none;
   padding: 20px;
 }
-.footer-bottom ul li:hover{border-bottom: 3px solid #FFC107;height:25px;}
+.footer-bottom ul li:hover{border-bottom: 3px solid #555;height:25px;}
 
 /* midpart style */
-.midpart{text-align: center;}
+/* searchbar */
+.midpart{text-align: center; background-color: aliceblue; padding-bottom: 20px;}
 .search{ background-color: skyblue; margin-bottom: 20px; padding: 60px; font-size: 20px;}
 input[type=text]
 {
 	border: none;
 	width: 100%;
-	/* background: black;
-	color: white; */
 	font-size: 15px;
 	line-height: 25px;
   padding: 10px 0;
@@ -103,4 +102,51 @@ input[type=text]
   background: none;
   border: 0;}
 
+  /* questions */
+.featured{
+  text-align: left;
+  background-color: white;
+  width: 700px;
+  margin: auto;
+  font-size: 20px;
+  padding:25px;
   
+}
+.article{font-size:20px; margin-top: 5px;}
+.item-list{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.item{
+  /* color:#555; */
+  border-top: 1px solid  #dfdfdf;
+  line-height: 55px;
+  margin: 0;
+  text-decoration: none !important;
+  font-size: 15px;
+  padding-top: 9px;
+}
+.question li a{color: #303030; margin-top: 10px;}
+
+.myrightfa{ 
+  color:#555;
+  margin-right:10px;} 
+.answer{font-size: 13px; margin-left: 20px; display: none;}
+
+.box{text-align: center; margin-top: 20px; }
+.box .mainbox{
+  display: inline-block;
+    padding: 22px;
+    border: 1px solid #ddd;
+    width: 28%;
+    background-color: white;
+    height: 150px;
+    line-height: 100px;
+    font-size: 30px;
+    text-align: center;
+    color:#303030;
+    margin-right: 15px;
+    margin-left: 15px;
+
+}
