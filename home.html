@@ -1,37 +1,96 @@
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<div class="head"></div>
 
+<div class="midpart">
+  <div class="search">
+    <h2>Welcome to Our Support Center</h2>
+    <p style="margin-bottom: 20px">How Can We Help You?</p>
+    <form class="bar" action="#" style="margin:auto;max-width:450px; position: relative;">
+      <input type="text" placeholder="Type your question here.." name="search1">
+      <button type="submit" class="icon"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-crossorigin="anonymous"></script>
-  <div class="head"></div>
-
-   <div class="midpart">
-     <div class="search">
-       <h2>Welcome to Our Support Center</h2>
-       <p style="margin-bottom: 20px">How Can We Help You?</p>
-       <form class="bar" action="#" style="margin:auto;max-width:450px; position: relative;">
-        <input type="text" placeholder="Type your question here.." name="search1">
-        <button type="submit" class="icon"><i class="fa fa-search"></i></button>
-      </form>
-     </div>
+  <div class="featured">
+    <h2 class="article">Featured Articles</h2>
     <div class="question">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere optio illo molestiae hic adipisci modi architecto fugit ducimus distinctio, ipsam provident dolor neque, corporis labore nam obcaecati voluptatum! Fugit, voluptas!
+      <ul class="item-list">
+        <li><a href="javascript:void(0)" class="item"><i class="fa fa-angle-right myrightfa"></i>When is classical
+            inheritance an appropriate choice?</a>
+          <div class="answer">
+            The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are
+            an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into
+            one of several common misconceptions. More frequently, the challenge is met with silence
+          </div>
+        </li>
+        <li><a href="javascript:void(0)" class="item"><i class="fa fa-angle-right myrightfa"></i>When is classical
+            inheritance an appropriate choice?</a>
+          <div class="answer">
+            The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are
+            an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into
+            one of several common misconceptions. More frequently, the challenge is met with silence
+          </div>
+        </li>
+        <li><a href="javascript:void(0)" class="item"><i class="fa fa-angle-right myrightfa"></i>When is classical
+            inheritance an appropriate choice?</a>
+          <div class="answer">
+            The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are
+            an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into
+            one of several common misconceptions. More frequently, the challenge is met with silence
+          </div>
+        </li>
+        <li><a href="javascript:void(0)" class="item"><i class="fa fa-angle-right myrightfa"></i>When is classical
+            inheritance an appropriate choice?</a>
+          <div class="answer">
+            The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are
+            an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into
+            one of several common misconceptions. More frequently, the challenge is met with silence
+          </div>
+        </li>
+        <li><a href="javascript:void(0)" class="item"><i class="fa fa-angle-right myrightfa"></i>When is classical
+            inheritance an appropriate choice?</a>
+          <div class="answer">
+            The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are
+            an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into
+            one of several common misconceptions. More frequently, the challenge is met with silence
+          </div>
+        </li>
+      </ul>
     </div>
+  </div>
 
-    <div class="box">
+  <div class="box">
+      <a href="javascript:void(0)" class="mainbox">Realtime Testing</a>
+      <a href="javascript:void(0)" class="mainbox">Automation</a>
+  </div>
+</div>
 
-    </div>
-   </div>
+<div class="foot"></div>
 
-  <div class="foot"></div>
-  
-  <script> 
-      $(function(){
-        $(".head").load("/templates/header.html");
-        $(".foot").load("/templates/footer.html");
-     
+<script>
+  $(function () {
+    $(".head").load("/templates/header.html");
+    $(".foot").load("/templates/footer.html");
 
-      });
-      </script>
+
+  });
+  //my toggle class
+  $(document).ready(function () {
+    $(".item").click(function () {
+      $(".answer").slideUp();
+      var currentans = $(this).next(".answer");
+      if(currentans.css('display') == 'none') {
+        $(this).next(".answer").slideDown();
+      } else {
+        $(this).next(".answer").slideUp();
+      }
+    
+    });
+  });
+
+
+</script>
