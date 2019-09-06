@@ -1,11 +1,34 @@
 
   <script id="footer-template" type="text/x-handlebars-template">
     <div class="footer">
-      <div class="footer-content">
-        <div class="footer-section about"></div>
-        <div class="footer-section links"></div>
-        <div class="footer-section contact"></div>
-        
+      <div class="container">
+          <div class="row">
+              <div class="col-4">
+                <ul class="design">
+                <li><a href="#"><i class="fa fa-facebook  pic"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter pic"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin pic"></i></a></li>
+                <li><a href="#"><i class="fas fa-envelope pic"></i>
+                 </a></li> 
+                </ul>
+              </div>
+              <div class="col-4">
+                  <ul class="design">
+                  <li><a href="#">{{section1}}</a></li>
+                  <li><a href="#">{{section2}}</a></li>
+                  <li><a href="#">{{section3}}</a></li>
+                  <li><a href="#">{{section4}}</a></li> 
+                  </ul>
+                </div>
+                <div class="col-4">
+                    <ul class="design">
+                    <li><a href="#">{{section5}}</a></li>
+                    <li><a href="#">{{section6}}</a></li>
+                    <li><a href="#">{{section7}}</a></li>
+                    <li><a href="#">{{section8}}</a></li> 
+                    </ul>
+                  </div>
+            </div>
       </div>
       <div class="footer-bottom">
         &copy;2019 LambdaTest.com. All rights reserved
@@ -45,7 +68,15 @@
           var context={
             "obj1": "privacy",
             "obj2": "Term of use",
-            "obj3": "Sitemap"
+            "obj3": "Sitemap",
+            "section1": "FAQ",
+            "section2": "Team",
+            "section3": "Career",
+            "section4": "Contact Us",
+            "section5": "Features",
+            "section6": "List of Browsers",
+            "section7": "Integrations",
+            "section8": "Partners"
        
           };
         
