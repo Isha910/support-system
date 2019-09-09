@@ -29,7 +29,7 @@ nav ul li a{
   color:white;
   padding: 20px;
 }
-nav ul li a:hover{ color:skyblue;}
+nav ul li a:hover{ color:white;} 
 
 nav ul .sign:hover{ border-bottom:none; background: none;}
 nav ul .sign a{background: skyblue;}
@@ -49,8 +49,17 @@ nav ul .sign a{background: skyblue;}
   margin-top: 12px;
 
 }
+.social li{display: inline-block;}
+.social {
+  line-height: 20px;
+  padding-top: 5px;
+  }
+.socialfa{
+  margin-right:10px;
+  width: 20px;
+}
+/* .design li img{width: 20px;} */
 
-.design li img{width: 20px;}
 
  .footer .footer-bottom{
   background: #1e9aa4;
@@ -135,7 +144,7 @@ input[type=text]
 .answer{font-size: 13px; margin-left: 20px; display: none;}
 
 /* box part */
-.box{text-align: center; margin-top: 20px; }
+.box{text-align: center; margin-top: 20px; margin-bottom: 15px; }
 .box .mainbox{
   display: inline-block;
     padding: 22px;
