@@ -92,7 +92,7 @@ nav ul .sign a{background: skyblue;}
 /* midpart style */
 /* searchbar */
 .midpart{text-align: center; background-color: aliceblue; padding-bottom: 20px;}
-.search{ background-color: skyblue; margin-bottom: 20px; padding: 60px; font-size: 20px;}
+.search{ background-color: skyblue; margin-bottom: 20px; padding: 60px; font-size: 20px; text-align: center;}
 input[type=text]
 {
 	border: none;
