@@ -1,15 +1,22 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+
 <div class="head"></div>
 
 <div class="midpart">
-  
+
   <div class="box">
-      <a href="realtime.html" class="mainbox">Realtime Testing</a>
-      <a href="javascript:void(0)" class="mainbox">Automation</a>
+    <a href="realtime.html" class="mainbox"><img src="images/realimg.png"
+        style="width: 100px; text-align: center; display: block; margin: 0 auto">Realtime Testing</a>
+    <a href="javascript:void(0)" class="mainbox"><img src="images/auto.png"
+        style="width: 100px; text-align: center; display: block; margin: 0 auto">Automation</a>
+  </div>
   </div>
 
 
@@ -61,7 +68,7 @@
     </div>
   </div>
 
-  
+
 </div>
 
 <div class="foot"></div>
@@ -78,14 +85,14 @@
     $(".item").click(function () {
       $(".answer").slideUp();
       var currentans = $(this).next(".answer");
-      if(currentans.css('display') == 'none') {
+      if (currentans.css('display') == 'none') {
         $(this).next(".answer").slideDown();
       } else {
         $(this).next(".answer").slideUp();
       }
-    
+
     });
   });
 
-
 </script>
+
