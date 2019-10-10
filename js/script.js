@@ -111,7 +111,20 @@ function createList(arr) {
 
 createList(obj);
 
+function getData(...params) {
+  
+    var res = newObj[params[0]];
 
+    for(i=1; i<params.length;i++)
+    {
+        res = res.items[params[i]]
+    }
+
+    console.log(res.name);
+    console.log('type',res.type)
+ }
+ getData(0,0,0);
+ 
 
 // console.log('',obj)
 // // console.log(obj[0].items[1])
