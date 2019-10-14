@@ -1,71 +1,5 @@
-var obj = [
-    {
-        "name": "Realtime Testing",
-        "type": "box",
-        "items": [
-            {
-                "name": "Category",
-                "type": "box",
-                "items": [
-                    {
-                        "name": "Mobile",
-                        "type": "box",
-                        "items": [
-                            {
-                                "name": "Android",
-                                "type": "box",
-                                "items": []
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Browser",
-                        "items": []
-                    },
-                    {
-                        "name": "Desktop",
-                        "items": []
-                    }
-                ]
-            },
-            {
-                "name": "Questions",
-                "type": "ques",
-                "items": []
-            }
-        ]
-    }, {
-        "name": "Automation Testing",
-        "type": "box",
-        "items": [
-            {
-                "name": "Category",
-                "type": "box",
-                "items": [
-                    {
-                        "name": "Mobile",
-                        "items": []
-                    },
-                    {
-                        "name": "Browser",
-                        "items": []
-                    },
-                    {
-                        "name": "Desktop",
-                        "items": []
-                    }
-                ]
-            },
-            {
-                "name": "Questions"
-            }
-        ]
-    }
-];
-
 var parsedObj = JSON.stringify(obj);
 var newObj = JSON.parse(parsedObj);
-
 
 
 var i = 0;
@@ -111,20 +45,25 @@ function createList(arr) {
 
 createList(obj);
 
+
 function getData(...params) {
-  
+
     var res = newObj[params[0]];
 
-    for(i=1; i<params.length;i++)
-    {
+    for (i = 1; i< params.length; i++) {
         res = res.items[params[i]]
     }
 
     console.log(res.name);
     console.log('type',res.type)
- }
- getData(0,0,0);
- 
+}
+getData(0,0,0);
+
+
+
+
+
+
 
 // console.log('',obj)
 // // console.log(obj[0].items[1])
@@ -148,12 +87,12 @@ function getData(...params) {
 
 //         selector += `[${params[i]}].items`
 //          //console.log({selector});
-         
-         
-       
+
+
+
 //     }
-    
-    // console.log(selector)
+
+    // console.log(selector) 
 
     // y.filter(d=>d[key]==value);
 
