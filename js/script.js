@@ -1,7 +1,6 @@
 var parsedObj = JSON.stringify(obj);
 var newObj = JSON.parse(parsedObj);
 
-
 var i = 0;
 var html = [];
 
@@ -50,14 +49,14 @@ function getData(...params) {
 
     var res = newObj[params[0]];
 
-    for (i = 1; i< params.length; i++) {
+    for (i = 1; i < params.length; i++) {
         res = res.items[params[i]]
     }
 
     console.log(res.name);
-    console.log('type',res.type)
+    console.log('type', res.type)
 }
-getData(0,0,0);
+getData(0, 0, 0);
 
 
 
