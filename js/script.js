@@ -64,6 +64,31 @@ getData(0, 0, 0);
 
 
 
+
+
+
+
+
+
+
+
+
+
+// console.log(newObj);
+// window.onload = function () {
+//     document.getElementById("catg").innerHTML = newObj[0].items[0].name;
+//     document.getElementById("que").innerHTML = newObj[0].items[1].name;
+    
+// };
+
+
+
+
+
+
+
+
+
 // console.log('',obj)
 // // console.log(obj[0].items[1])
 // const key = "type";

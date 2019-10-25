@@ -58,7 +58,27 @@ var obj = [
       },
       {
         "name": "Questions"
+        
       }
     ]
   }
+];
+
+var urldata = [{
+  catKey: 'category',
+  catValue: 'box',
+},
+{
+  catKey: 'items',
+  catValue: 'mobile',
+},
+{
+  catkey: 'items',
+  catvalue: 'desktop'
+},
+{
+  catkey: 'items',
+  catvalue: 'broswer'
+},
+
 ];
