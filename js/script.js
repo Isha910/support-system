@@ -58,6 +58,40 @@ function getData(...params) {
 }
 getData(0, 0, 0);
 
+// $('#navigation a').click(function(event){
+//     event.preventDefault();
+//     url = $(this).attr('href');
+//     history.pushState({key:home.html}, '',url);
+//     });
+//     window.onpopstate = function(event){
+//         event.preventDefault();
+//         hash=location.pathname;
+            
+//         loadPage(hash.replace('/webdesign/pushstate/', ''));
+//      }
+     
+
+// $(document).ready(function () {
+
+//     $('.mainbox').click(function () {
+//         var getUrl = window.location.href;
+//         document.write(getUrl);
+           
+//     });
+
+// });
+
+
+// var hash = window.location.href.split('#')[1] || '';
+// console.log(hash);
+
+
+
+// let url = new URL('http://127.0.0.1:5500/home.html');
+
+// url.searchParams.set('', 'realtimetesting/'); // added parameter with a space and !
+
+// alert(url);
 
 
 
@@ -73,20 +107,51 @@ getData(0, 0, 0);
 
 
 
+
+
+
+
+
+
+
+// let url = new URL('http://127.0.0.1:5500/home.html');
+// let newUrl = new URL('RealtimeTesting', url);
+
+// document.write(newUrl); 
+
+
+// var x = location.href;
+// // document.write(x);
+// var y = x.split("/");
+// let z =[y];
+// // document.write(z);
+// for (let i = 0; i < z.length; i++) {
+
+//     console.log(z[i]);
+// }
+
+
+// var getUrl = window.location.href;
+// console.log(getUrl);
+// var result = getUrl.split(" ");
+// console.log(result);
+
+
+
+// function getQueryVariable(variable)
+// {
+//     var getUrl = window.location.href;
+//     console.log(getUrl);
+
+
+// }
 
 // console.log(newObj);
 // window.onload = function () {
 //     document.getElementById("catg").innerHTML = newObj[0].items[0].name;
 //     document.getElementById("que").innerHTML = newObj[0].items[1].name;
-    
+
 // };
-
-
-
-
-
-
-
 
 
 // console.log('',obj)
@@ -115,12 +180,6 @@ getData(0, 0, 0);
 
 
 //     }
-
-    // console.log(selector) 
-
-    // y.filter(d=>d[key]==value);
-
-//     var seletedArr = 'obj'+`${selector}`
 
 
 
