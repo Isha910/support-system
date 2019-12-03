@@ -58,6 +58,28 @@ function getData(...params) {
 }
 getData(0, 0, 0);
 
+$(document).ready(function () {
+
+    $('.mainbox').click(function () {
+        var getUrl = window.location.href;
+        document.write(getUrl);
+        
+    // var rest = newObj[parm[0]];
+    
+    // for (i = 1; i < parm.length; i++) {
+    //     rest = rest.items[par[i]]
+    // }
+    // console.log(rest.name);
+
+        // let divs = document.getElementsById("mailbox").innerHTML;
+        // document.write(divs);
+        
+    
+    });
+
+});
+
+
 // $('#navigation a').click(function(event){
 //     event.preventDefault();
 //     url = $(this).attr('href');
@@ -70,17 +92,6 @@ getData(0, 0, 0);
 //         loadPage(hash.replace('/webdesign/pushstate/', ''));
 //      }
      
-
-// $(document).ready(function () {
-
-//     $('.mainbox').click(function () {
-//         var getUrl = window.location.href;
-//         document.write(getUrl);
-           
-//     });
-
-// });
-
 
 // var hash = window.location.href.split('#')[1] || '';
 // console.log(hash);
