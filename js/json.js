@@ -21,7 +21,7 @@ var obj = [
           {
             "name": "Browser",
             "items": []
-          },
+          },  
           {
             "name": "Desktop",
             "items": []
