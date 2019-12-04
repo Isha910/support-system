@@ -64,6 +64,7 @@ $(document).ready(function () {
         var getUrl = window.location.href;
         document.write(getUrl);
         
+        
     // var rest = newObj[parm[0]];
     
     // for (i = 1; i < parm.length; i++) {
