@@ -147,8 +147,8 @@ input[type=text]
 .answer{font-size: 13px; margin-left: 20px; display: none;}
 
 /* box part */
-.box{text-align: center; margin-top: 20px; margin-bottom: 15px; }
-.box .mainbox{
+/* .box{text-align: center; margin-top: 20px; margin-bottom: 15px; } */
+.box{
   display: inline-block;
   padding: 42px;
   border: 1px solid #ddd;
@@ -164,9 +164,7 @@ input[type=text]
   text-decoration: none;
   border-block-style: grey;
 }
-.mainbox{
-  text-align: center;
-}
+
  .box a:hover{color: skyblue;} 
 /* .box .mainbox:hover{color: rgb(8, 8, 8)} */
 
