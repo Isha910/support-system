@@ -1,5 +1,6 @@
 var parsedObj = JSON.stringify(obj);
 var newObj = JSON.parse(parsedObj);
+console.log(newObj);
 
 var i = 0;
 var html = [];
@@ -52,150 +53,164 @@ function getData(...params) {
     for (i = 1; i < params.length; i++) {
         res = res.items[params[i]]
     }
+    return res;
 
     console.log(res.name);
     console.log('type', res.type)
 }
 getData(0, 0, 0);
 
-$(document).ready(function () {
+function dataHandler(url){
 
-    $('.mainbox').click(function () {
-        var getUrl = window.location.href;
-        document.write(getUrl);
-        
-        
-    // var rest = newObj[parm[0]];
+    if(url==''){
+
+    var real = getData(0);
+    var auto = getData(1);
+    document.getElementById('realtime').innerHTML ='<img src="images/realimg.png" style="width: 100px; text-align: center; display: block; margin: 0 auto">'+ real.name;
+      document.getElementById('automation').innerHTML ='<img src="images/realimg.png" style="width: 100px; text-align: center; display: block; margin: 0 auto">'+ auto.name;
     
-    // for (i = 1; i < parm.length; i++) {
-    //     rest = rest.items[par[i]]
-    // }
-    // console.log(rest.name);
-
-        // let divs = document.getElementsById("mailbox").innerHTML;
-        // document.write(divs);
-        
+    }else if(url == 'realtime'){
+  
+    var rCatg = getData(0, 0);
+    var rQues = getData(0,1);
+    console.log(rCatg);
+    console.log(rQues);
+    document.getElementById('category').innerHTML = rCatg.name;
+    document.getElementById('questions').innerHTML= rQues.name;   
+  
+    }else if(url =='automation'){
+    var aCatg = getData(1,0); 
+    var aQues = getData(1,1);
+              console.log(aCatg);
+              console.log(aQues);
+              document.getElementById('category').innerHTML = aCatg.name;
+              document.getElementById('questions').innerHTML= aQues.name; 
+  
+  }else{
+    document.write("page not matched");
+  }
     
-    });
 
-});
+}
+
+$(document).ready(function() {
+    var loc = window.location.href;
+    console.log('location', loc);
+    var x = loc.split('/');
+    let url = x[x.length-1];
+     console.log(x);
+   dataHandler(url);
+   
+  });
+
+  function myFunction(para){
+      setTimeout(function(){
+        dataHandler(para);   
+      } ,500)
+    
+}
+
+function createQuestions(questions, appendedParent) {
+    for(j=0; j<questions.length; j++) {
+
+        var li = document.createElement("li");
+        var div = document.createElement("div");
+        var a = document.createElement("a");
+        var i = document.createElement("i");
+
+        i.classList.add("fa", "fa-angle-right", "myrightfa");
+        a.classList.add("item");
+        a.appendChild(i);
+        a.innerHTML += questions[j].question;
+        div.classList.add("answer");
+        div.innerText = questions[j].answer;
+
+        li.appendChild(a)
+        li.appendChild(div)
+
+        appendedParent.appendChild(li)
+    }
+}
+
+function serveQuestions() {
+
+    var currentPath = window.location.pathname;
+
+    console.log(currentPath);
+
+    var quesTemp = document.getElementById("questions-template");
+
+    var parDiv = document.createElement("div");
+    var parDivUl = document.createElement("ul");
+    parDiv.classList.add("question", "myquestions");
+    parDivUl.classList.add("item-list");
+
+    parDiv.appendChild(parDivUl);
+    quesTemp.appendChild(parDiv);
+
+    var questionsList = document.getElementById("questionsList");
+    
+    if (currentPath === "/realtime") {
+        var rCatg = getData(0, 0);
+        var rQues = getData(0,1);
+
+        var questions = rQues.items;
+        
+        createQuestions(questions, parDivUl);    
+    }
+    if (currentPath === "/automation") {
+        var aCatg = getData(1,0); 
+        var aQues = getData(1,1);
+
+        var questions = aQues.items;
+        
+        createQuestions(questions, parDivUl);
+        
+    }
+
+}
+
+function serveBox(){
+    var currentPath = window.location.pathname;
+    console.log(currentPath);
+    var li 
+    
+
+}
+   
 
 
-// $('#navigation a').click(function(event){
-//     event.preventDefault();
-//     url = $(this).attr('href');
-//     history.pushState({key:home.html}, '',url);
+// $(document).ready(function() {
+//         var home1 = getData(0);
+//         var home2 = getData(1);
+//         // var home3 = getData(0, 0);
+    
+//         document.getElementById('realtime').innerHTML ='<img src="images/realimg.png" style="width: 100px; text-align: center; display: block; margin: 0 auto">'+ home1.name;
+//         document.getElementById('automation').innerHTML ='<img src="images/realimg.png" style="width: 100px; text-align: center; display: block; margin: 0 auto">'+ home2.name;
+        
 //     });
-//     window.onpopstate = function(event){
-//         event.preventDefault();
-//         hash=location.pathname;
-            
-//         loadPage(hash.replace('/webdesign/pushstate/', ''));
-//      }
-     
-
-// var hash = window.location.href.split('#')[1] || '';
-// console.log(hash);
-
-
-
-// let url = new URL('http://127.0.0.1:5500/home.html');
-
-// url.searchParams.set('', 'realtimetesting/'); // added parameter with a space and !
-
-// alert(url);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let url = new URL('http://127.0.0.1:5500/home.html');
-// let newUrl = new URL('RealtimeTesting', url);
-
-// document.write(newUrl); 
-
-
-// var x = location.href;
-// // document.write(x);
-// var y = x.split("/");
-// let z =[y];
-// // document.write(z);
-// for (let i = 0; i < z.length; i++) {
-
-//     console.log(z[i]);
-// }
-
-
-// var getUrl = window.location.href;
-// console.log(getUrl);
-// var result = getUrl.split(" ");
-// console.log(result);
-
-
-
-// function getQueryVariable(variable)
-// {
-//     var getUrl = window.location.href;
-//     console.log(getUrl);
-
-
-// }
-
-// console.log(newObj);
-// window.onload = function () {
-//     document.getElementById("catg").innerHTML = newObj[0].items[0].name;
-//     document.getElementById("que").innerHTML = newObj[0].items[1].name;
-
-// };
-
-
-// console.log('',obj)
-// // console.log(obj[0].items[1])
-// const key = "type";
-// const value= "box";
-// const result = obj[0].items.filter(d=>d[key]==value);
-
-// console.log('my rw', result);
-
-// function getData(...params) {
-//     console.log("**********")
-//     // console.log(params[0]);
-//     // console.log(obj[params[0].items[params[1]]])
-//     // console.log(newObj)
-//     var selector = '';
-//     var temp;
-//     for (i= 1; i < params.length; i++){
-//         // obj[0].items[0].items.filter(d=>d[key]==value);
-//         //console.log(params[i]);
-
-
-//         selector += `[${params[i]}].items`
-//          //console.log({selector});
-
-
-
+    
+//     function myFunction(type){
+//         setTimeout(function(){
+//             if(type == "realtime"){
+//                 var home3 = getData(0, 0);
+//                 var home4 = getData(0,1);
+//                 console.log(home3);
+//                 console.log(home4);
+//                 document.getElementById('category').innerHTML = home3.name;
+//                 document.getElementById('questions').innerHTML= home4.name;   
+//             }
+//             else{
+//                 var home5 = getData(1,0); 
+//                 var home6 = getData(1,1);
+//                 console.log(home5);
+//                 console.log(home6);
+//                 document.getElementById('category').innerHTML = home5.name;
+//                 document.getElementById('questions').innerHTML= home6.name;   
+//             }
+//         },500);
 //     }
-
-
-
-
+        
 
 
 
