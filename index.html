@@ -17,81 +17,78 @@
 <section id="content"></section>
 
 <script id="realtime-template" type="text/x-template">
-      <h1>hello</h1>
-      </script>
+  <div class="midpart">
+    <ul>
+      <li class="box"><a href="/realtime/category" id="category"></a></li>
+      <li class="box"><a href="/realtime/questions" id="questions" onclick="serveQuestions()"></a></li>
+    </ul>
+  </div>  
+</script>
 
 <script id="automation-template" type="text/x-template">
-      <h1>hyy</h1>
-      </script>
+  <div class="midpart">
+    <ul>
+      <li class="box"><a href="/automation/category" id="category"></a></li>
+      <li class="box"><a href="/automation/questions" id="questions" onclick="serveQuestions()"></a></li>
+    </ul>
+  </div>  
+</script>
 
+<script id="category-template" type="text/x-template">
+  <!-- <div class="midpart">
+    <ul>
+      <li class="box"><a href="/automation/category" id="mobile"></a></li>
+      <li class="box"><a href="/automation/questions" id="browser"></a></li>
+      <li class="box"><a href="/automation/questions" id="desktop"></a></li>
+    </ul>
+  </div>  -->
+</script>
 
+<script id="questions-template" type="text/x-template">
+</script>
 
 
 <script id="home-template" type="text/x-template">
   <div class="midpart">
-   
-      <ul>
-        
-        <li class="box"><a href="/realtime"><img src="images/realimg.png" style="width: 100px; text-align: center; display: block; margin: 0 auto">Realtime Testing</a></li>
-        <li class="box"><a href="/automation" class="mainbox"><img src="images/auto.png" style="width: 100px; text-align: center; display: block; margin: 0 auto">Automation</a></li>
+    <ul>
+      <li class="box"><a href="/realtime" onclick="myFunction('realtime')" id="realtime"><img src="images/realimg.png" style="width: 100px; text-align: center; display: block; margin: 0 auto"></a></li>
+      <li class="box"><a href="/automation" onclick="myFunction('automation')" id="automation"><img src="images/auto.png" style="width: 100px; text-align: center; display: block; margin: 0 auto"></a></li>
       </ul>
-  
-    </div> 
-  
-    <div class="featured">
-    
-        <h2 class="article">Featured Articles</h2>
-        <div class="question">
-          <ul class="item-list">
-            <li><a href="javascript:void(0)" class="item"><i class="fa fa-angle-right myrightfa"></i>When is classical
-                inheritance an appropriate choice?</a>
-              <div class="answer">
-                The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are
-                an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into
-                one of several common misconceptions. More frequently, the challenge is met with silence
-              </div>
-            </li>
-            <li><a href="javascript:void(0)" class="item"><i class="fa fa-angle-right myrightfa"></i>When is classical
-                inheritance an appropriate choice?</a>
-              <div class="answer">
-                The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are
-                an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into
-                one of several common misconceptions. More frequently, the challenge is met with silence
-              </div>
-            </li>
-            <li><a href="javascript:void(0)" class="item"><i class="fa fa-angle-right myrightfa"></i>When is classical
-                inheritance an appropriate choice?</a>
-              <div class="answer">
-                The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are
-                an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into
-                one of several common misconceptions. More frequently, the challenge is met with silence
-              </div>
-            </li>
-            <li><a href="javascript:void(0)" class="item"><i class="fa fa-angle-right myrightfa"></i>When is classical
-                inheritance an appropriate choice?</a>
-              <div class="answer">
-                The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are
-                an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into
-                one of several common misconceptions. More frequently, the challenge is met with silence
-              </div>
-            </li>
-            <li><a href="javascript:void(0)" class="item"><i class="fa fa-angle-right myrightfa"></i>When is classical
-                inheritance an appropriate choice?</a>
-              <div class="answer">
-                The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are
-                an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into
-                one of several common misconceptions. More frequently, the challenge is met with silence
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </script>
+  </div> 
 
-
-
-
-
+  <div class="featured">
+    <h2 class="article">Featured Articles</h2>
+    <div class="question">
+      <ul class="item-list" id="questionsList">
+        <li><a href="javascript:void(0)" class="item"><i class="fa fa-angle-right myrightfa"></i>When is classical inheritance an appropriate choice?</a>
+          <div class="answer">
+            The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into one of several common misconceptions. More frequently, the challenge is met with silence.
+          </div>
+        </li>
+        <li><a href="javascript:void(0)" class="item"><i class="fa fa-angle-right myrightfa"></i>When is classical inheritance an appropriate choice?</a>
+          <div class="answer">
+            The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into one of several common misconceptions. More frequently, the challenge is met with silence.
+          </div>
+        </li>
+        <li><a href="javascript:void(0)" class="item"><i class="fa fa-angle-right myrightfa"></i>When is classical inheritance an appropriate choice?</a>
+          <div class="answer">
+            The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into one of several common misconceptions. More frequently, the challenge is met with silence.
+          </div>
+        </li>
+        <li><a href="javascript:void(0)" class="item"><i class="fa fa-angle-right myrightfa"></i>When is classical inheritance an appropriate choice?</a>
+          <div class="answer">
+            The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into one of several common misconceptions. More frequently, the challenge is met with silence.
+          </div>
+        </li>
+        <li><a href="javascript:void(0)" class="item"><i class="fa fa-angle-right myrightfa"></i>When is classical inheritance an appropriate choice?</a>
+          <div class="answer">
+            The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into one of several common misconceptions. More frequently, the challenge is met with silence
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</script>
 
 
 <div class="foot"></div>
@@ -104,17 +101,17 @@
 
   });
   //my toggle class
-  $(document).ready(function () {
-    $(".item").click(function () {
-      $(".answer").slideUp();
-      var currentans = $(this).next(".answer");
-      if (currentans.css('display') == 'none') {
-        $(this).next(".answer").slideDown();
-      } else {
-        $(this).next(".answer").slideUp();
-      }
 
-    });
+
+  $("body").on('click', '.item', function () {
+    $(".answer").slideUp();
+    var currentans = $(this).next(".answer");
+    if (currentans.css('display') == 'none') {
+      $(this).next(".answer").slideDown();
+    } else {
+      $(this).next(".answer").slideUp();
+    }
+
   });
 
 </script>
