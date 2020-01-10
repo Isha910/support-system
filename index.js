@@ -3,6 +3,11 @@
 page('/', showHome);
 page('/automation', showAutomation);
 page('/realtime', showRealtime);
+page('/realtime/category', showCategory);
+page('/realtime/questions',  showQuestion);
+page('/automation/category', showCategory);
+page('/automation/questions',  showQuestion);
+
 page('*', notfound);
 page();
 
@@ -18,11 +23,25 @@ function showHome(ctx) {
 }
 
 function showAutomation(ctx) {
+  console.log('ctx', ctx);
   render(template('automation'), !ctx.init);
 }
 
 function showRealtime(ctx) {
   render(template('realtime'), !ctx.init);
+  // var home3 = getData(0, 0);
+  // console.log(home3);
+  // console.log('document',document)
+  // console.log("getElementById('category')",document.getElementById('category'))
+  // document.getElementById('category').innerHTML = home3.name;
+}
+
+function showCategory(ctx) {
+  render(template('category'), !ctx.init);
+}
+
+function showQuestion(ctx) {
+  render(template('questions'), !ctx.init);
 }
 
 function notfound(ctx) {
